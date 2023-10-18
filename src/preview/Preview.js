@@ -40,6 +40,15 @@ const Preview = (props) => {
 
         let sanitizedCode = transformedCode.split('\n').filter(line => !line.trim().startsWith('default')).join('\n');
 
+        sanitizedCode = sanitizedCode
+            .replace(/import React from 'react';/g, 'const React = window.React;')
+            .replace(/import {([^}]+)} from 'react';/g, (match, p1) => {
+                // named exports를 분리 (useState, useEffect, ...)
+                const names = p1.split(',').map(name => name.trim());
+                return names.map(name => `const ${name} = window.React.${name};`).join('\n');
+            });
+
+
         let match = sanitizedCode.match(/function (\w+)|class (\w+)|const (\w+) = \(.*\)\s*=>\s*{?\s*return/);
         let componentName = match && (match[1] || match[2] || match[3]);
 
@@ -76,10 +85,11 @@ const Preview = (props) => {
     }, [compiledCode])
 
     return (
-        <div>
+        <div style={{ width: '100%', height: '100%' }}>
             <iframe
                 title="Compiled Code Output"
                 src={code}
+                style={{ width: '100%', height: '100%', border: 'none' }}
             />
         </div>
     );

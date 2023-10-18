@@ -7,15 +7,22 @@ const CodeEditor = (props) => {
     const handleEditorChange = (newCode) => {
         onChange(newCode);
     };
+    const editorDidMount = (editor) => {
+        // Set top padding to the editor
+        editor.updateOptions({ padding: { top: 20 } });
+    };
 
   return (
-    <MonacoEditor
-        language="javascript"
-        theme="vs-dark"
-        value={code}
-        options={{selectOnLineNumbers: true}}
-        onChange={handleEditorChange}
-      />
+      <div style={{ height: '100%', width: '100%' }}>
+        <MonacoEditor
+            language="javascript"
+            theme="vs-dark"
+            value={code}
+            options={{selectOnLineNumbers: true}}
+            onChange={handleEditorChange}
+            editorDidMount={(editor, monaco) => editorDidMount(editor)}
+        />
+      </div>
   );
 }
 
