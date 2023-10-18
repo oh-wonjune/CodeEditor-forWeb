@@ -1,0 +1,88 @@
+/* SplitPane styles */
+.split-pane {
+  position: relative;
+  overflow: hidden;
+}
+
+.pane {
+  position: absolute;
+  outline: none;
+}
+
+.vertical.pane {
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.pane1 {
+  left: 0;
+}
+
+.vertical .pane1 {
+  right: 10px;
+}
+
+.pane2 {
+  right: 0;
+  width: 100%;
+}
+
+.vertical .pane2 {
+  left: 11px;
+}
+
+.resizer {
+  position: absolute;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.vertical .resizer {
+  cursor: ew-resize;
+  width: 10px;
+  height: 100%;
+  left: calc(50% - 5px);
+}
+/* App.css or another CSS file */
+.Resizer {
+  background: #888;
+  opacity: 0.5;
+  z-index: 1;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  transition: all 0.2s ease;
+}
+
+.Resizer.vertical {
+  width: 10px;
+  border-left: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  cursor: ew-resize;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.Resizer.horizontal {
+  height: 10px;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  cursor: ns-resize;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.Pane {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
