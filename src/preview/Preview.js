@@ -84,6 +84,7 @@ const Preview = (props) => {
         setCode(blobURL);
     }, [compiledCode])
 
+
     return (
         <div style={{ width: '100%', height: '100%' }}>
             <iframe

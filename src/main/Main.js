@@ -47,12 +47,12 @@ const Main = () => {
 export default Main;
 
 
-
-// import React, {useState, useEffect} from 'react';
+//
+// import { useState, useEffect } from 'react';
 //
 // function SampleComponent() {
 //
-//     const [msg, setMsg] = useState=("hello")
+//     const [msg, setMsg] = useState("hello")
 //     const onClickbtn =()=>{
 //         setMsg("hahahaha")
 //     }
