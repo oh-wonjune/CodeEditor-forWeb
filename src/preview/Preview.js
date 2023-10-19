@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const Preview = (props) => {
-    const {compiledCode} = props
+    const {compiledCode,setIsLoading} = props
     const [code, setCode] = useState(`
         <!DOCTYPE html>
         <html lang="en">
@@ -144,6 +144,7 @@ const Preview = (props) => {
                     const blob = new Blob([wrappedHTML], { type: 'text/html' });
                     const blobURL = URL.createObjectURL(blob);
                     setCode(blobURL)
+                    setIsLoading(false)
                 }
             });
         }

@@ -6,7 +6,7 @@ module.exports = {
     entry: './temp-code.js',  // 임시 파일 위치
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -23,10 +23,9 @@ module.exports = {
         ]
     },
   plugins: [
-    new MonacoWebpackPlugin({
-      // available options are documented at https://github.com/microsoft/monaco-editor/blob/main/webpack-plugin/README.md#options
-      languages: ['json']
-    })
+   new MonacoWebpackPlugin({
+            languages: ['javascript', 'typescript','css', 'html']  // 필요한 언어를 추가하십시오.
+        })
   ],
     externals: {
     "react": "React",      // `import React from 'react'`는 전역 변수 React를 사용합니다.

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import MonacoEditor from 'react-monaco-editor';
 
 const CodeEditor = (props) => {
     const {onChange,code} = props
+
+
 
     const handleEditorChange = (newCode) => {
         onChange(newCode);
@@ -13,10 +15,10 @@ const CodeEditor = (props) => {
     };
 
   return (
-      <div style={{ height: '100%', width: '100%' }}>
+      <div style={{ height: '100%', width: '100%'}}>
         <MonacoEditor
             language="javascript"
-            theme="vs-dark"
+            theme="hc-black"
             value={code}
             options={{selectOnLineNumbers: true}}
             onChange={handleEditorChange}
