@@ -71,25 +71,55 @@ const Main = () => {
 
 export default Main;
 
-
+// import React, { useState } from 'react';
 //
-// import { useState, useEffect } from 'react';
+// function App() {
+//   const [tasks, setTasks] = useState([]);
+//   const [taskInput, setTaskInput] = useState('');
 //
-// function SampleComponent() {
+//   const handleInputChange = (e) => {
+//     setTaskInput(e.target.value);
+//   };
 //
-//     const [msg, setMsg] = useState("hello")
-//     const onClickbtn =()=>{
-//         setMsg("hahahaha")
+//   const handleAddTask = () => {
+//     if (taskInput) {
+//       setTasks([...tasks, taskInput]);
+//       setTaskInput('');
 //     }
+//   };
 //
-//     return (
-//         <div>
-//         <div style={{ backgroundColor: 'lightblue', padding: '10px', borderRadius: '5px' }}>
-//             {msg}
-//         </div>
-//         <button onClick={onClickbtn}>테스트 </button>
-//         </div>
-//     );
+//   const handleRemoveTask = (index) => {
+//     const newTasks = tasks.filter((_, taskIndex) => taskIndex !== index);
+//     setTasks(newTasks);
+//   };
+//
+//   return (
+//     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+//       <h2>Simple To-Do App</h2>
+//       <div style={{ marginBottom: '20px' }}>
+//         <input
+//           type="text"
+//           value={taskInput}
+//           onChange={handleInputChange}
+//           placeholder="Enter new task..."
+//           style={{ marginRight: '10px' }}
+//         />
+//         <button onClick={handleAddTask}>Add</button>
+//       </div>
+//       <ul>
+//         {tasks.map((task, index) => (
+//           <li key={index} style={{ marginBottom: '10px' }}>
+//             {task}
+//             <button
+//               onClick={() => handleRemoveTask(index)}
+//               style={{ marginLeft: '10px', background: 'red', color: 'white' }}>
+//               Remove
+//             </button>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
 // }
 //
-// export default SampleComponent;
+// export default App;

@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# CodeDev: 웹 기반 React 코드 에디터
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CodeDev는 웹 기반의 React 코드 에디터입니다. 사용자는 코드를 쉽게 작성하고 랜더링된 결과를 실시간으로 확인할 수 있습니다.
 
-## Available Scripts
 
-In the project directory, you can run:
+## 주요 특징
 
-### `npm start`
+- **분할 화면 디자인**: 화면이 반으로 나뉘어져 있어, 좌측에는 React 코드를 작성하고, 우측에는 랜더링된 결과를 확인할 수 있습니다.
+- **실시간 랜더링**: 상단의 'rendering' 버튼을 통해 실시간으로 코드의 랜더링 결과를 확인할 수 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기술 스택
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**:
+  - `React`: 주요 프레임워크로서 UI 구성에 사용되었습니다.
+  - `MonacoEditor`: 코드 에디터 컴포넌트로, 사용자가 React 코드를 편리하게 작성할 수 있도록 해줍니다.
+  - (기타 프론트엔드 라이브러리나 도구가 있다면 추가해주세요.)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Rendering & Execution**:
+  - `Webpack`: 사용자가 작성한 코드를 실시간으로 번들링하여 iframe에 랜더링하기 위해 사용되었습니다.
+  
+- **Development Tools**:
+  - `npm`: 패키지 관리 및 스크립트 실행 도구
