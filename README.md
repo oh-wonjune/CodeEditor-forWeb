@@ -1,6 +1,7 @@
 # CodeDev: 웹 기반 React 코드 에디터
 
 CodeDev는 웹 기반의 React 코드 에디터입니다. 사용자는 코드를 쉽게 작성하고 랜더링된 결과를 실시간으로 확인할 수 있습니다.
+![스크린샷 2023-10-19 오후 5 16 40](https://github.com/oh-wonjune/CodeEditor-forWeb/assets/55135292/a5181388-ecf9-44cb-84b6-66d4ca0b9972)
 
 
 ## 주요 특징
