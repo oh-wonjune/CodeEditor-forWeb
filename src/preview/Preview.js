@@ -88,7 +88,7 @@ const Preview = (props) => {
     const sendCodeToServer=async (code)=> {
         try {
             // 서버의 /bundle 엔드포인트로 POST 요청을 보냅니다.
-            const response = await fetch('http://15.165.99.130:3001/bundle', {
+            const response = await fetch('http://13.124.236.4:3001/bundle', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
