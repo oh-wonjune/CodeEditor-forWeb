@@ -103,6 +103,7 @@ const Preview = (props) => {
             const bundledCode = await response.text();
             return bundledCode;
         } catch (error) {
+            setIsLoading(false)
             console.error("Error sending code to server:", error);
             return null;
         }
@@ -114,7 +115,7 @@ const Preview = (props) => {
             let componentName = match && (match[1] || match[2] || match[3]);
 
             if (!componentName) {
-                console.error("컴포넌트 이름을 찾을 수 없습니다.");
+                console.error("컴포넌트 이름이 없습니다.");
                 return;
             }
 
